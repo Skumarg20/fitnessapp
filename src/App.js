@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import Login from './components/usercomponents/login';
 import SignUp from './components/usercomponents/signup';
 import ShowBlog from './components/Blog/ShowBlog.js';
+import Blog from './components/Blog/Blog.js';
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/blog" element={<ProtectedRoute><ShowBlog /></ProtectedRoute>} />
+          <Route path="/blog/:blogId" element={<ProtectedRoute><Blog /></ProtectedRoute>} />
         </Routes>
         <Footer />
       </Box>
